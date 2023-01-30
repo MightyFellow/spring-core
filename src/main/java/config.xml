@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="
+      http://www.springframework.org/schema/context"
+      xmlns:p="http://www.springframework.org/schema/p"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans.xsd
+      http://www.springframework.org/schema/context
+      http://www.springframework.org/schema/context/spring-context.xsd">
+      
+      <!-- First Bean -->
+      <bean class="com.springcore.springcore.Student" name="student1">
+		  <!-- setter injection --> 
+		  <property name="studentId" value="23423" />
+	
+		  <property name="studentName" value="Ram Singh" />
+				  
+		  <property name="studentAddress" value="Delhi"/>
+		
+	  </bean>
+	  
+	  <!-- Second Bean -->
+	   <bean class="com.springcore.springcore.Student" name="student2">
+		  <!-- setter injection --> 
+		  <property name="studentId" value="1341" />
+	
+		  <property name="studentName" value="Shyam Singh" />
+				  
+		  <property name="studentAddress" value="Bengaluru"/>
+		
+	  </bean>
+	  
+	  <!-- Setting values to the bean using p schema -->
+	  <bean class="com.springcore.springcore.Student" name="student3" p:studentId="54321" p:studentName="Hulk" p:studentAddress="Gurgaon" />
+	  
+	  	  <!-- Setting values to the bean using p schema -->
+	  <bean class="com.springcore.springcore.Student" name="student4" p:studentId="67859" p:studentName="Iron Man" p:studentAddress="Michigan" />
+
+</beans>
